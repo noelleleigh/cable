@@ -427,12 +427,12 @@ The recommended way to use `Request Channel Time Range` to track a channel is
 to maintain a "rolling window". For example, a user that wishes to stay
 up-to-date with the last week's worth of chat history would, on client
 start-up, issue a `Request Channel Time Range` request with
-`time_start=now()-25200` (25200 seconds in a week) for a given channel of
+`time_start = now() - 25200` (25200 seconds in a week) for a given channel of
 interest. Known hashes provided by `Hash Response`s can be safely ignored,
 while new ones can be made to induce `Data Request`s for their content.
 
 The purpose of keeping a rolling time window instead of just asking for
-`time_start=last_bootup_time`, is to capture messages that were missed because
+`time_start = last_bootup_time`, is to capture messages that were missed because
 either a client or other peers were, at the time, offline or part of another
 network. This allows a client to make posts while offline, and still have them
 appear to others when they do come back online (within the client's rolling
@@ -461,7 +461,7 @@ client machine can have:
 
 A peer handling a request who has *outbound peers* (original requester,
 intermediary peer) must satisfy any of the following, for each outbound peer:
-    1. Receives a "no more data" `Hash Response` (`hash_count=0`) from the peer.
+    1. Receives a "no more data" `Hash Response` (`hash_count = 0`) from the peer.
     2. Sends the peer a `Cancel Request`. This could be induced by an explicit
        client action or e.g. a local timeout a client set on the request.
     3. The connection to the peer is lost.
@@ -501,9 +501,9 @@ SHOULD honour this limit by counting how many hashes they send back to the
 requester, **including** hashes received through other peers that the client
 has forwarded the request to.
 
-For example, assume `A` sends a request to `B` with `limit=50` and `ttl=1`, and
+For example, assume `A` sends a request to `B` with `limit = 50` and `ttl = 1`, and
 `B` forwards the request to `C` and `D`. `B` may send back 15 hashes to `A` at
-first, which means there are now a maximum of `50-15=35` hashes left for `C`
+first, which means there are now a maximum of `50 - 15 = 35` hashes left for `C`
 and `D` combined for `B` to potentially send back. `B` can choose to track
 hashes and perform deduplication, so that if `C` and `D` were to both send back
 a hash `f88954b3e6adc067af61cca2aea7e3baecfea4238cb1594e705ecd3c92a67cb1`, `B`
@@ -523,7 +523,7 @@ field      | type     | desc
 
 This example describes a binary payload that is 5 bytes long, where the one byte of field `foo` is followed immediately by the 4 bytes describing `bar`.
 
-If `foo=17` and `bar=[3,6,8,64]`, the following binary payload would be expected:
+If `foo = 17` and `bar = [3,6,8,64]`, the following binary payload would be expected:
 
 ```
  foo   bar
@@ -734,7 +734,7 @@ field        | type                | desc
 
 Its `msg_type` MUST be set to `0`.
 
-A `Hash Response` message with `hash_count=0` indicates that a peer does not
+A `Hash Response` message with `hash_count = 0` indicates that a peer does not
 intend to return any further data for the given request ID (`req_id`).
 
 ##### 6.2.3.2 Post Response
@@ -812,7 +812,7 @@ create additional types using unused numbers (`>= 256`). A client SHOULD NOT
 define its own custom post types below 256, since these may be used in the
 future to expand the core protocol.
 
-Specify `num_links=0` if there is nothing to link to.
+Specify `num_links = 0` if there is nothing to link to.
 
 Clients SHOULD ignore posts with a `post_type` that they don't understand or
 support.
