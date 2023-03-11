@@ -179,10 +179,10 @@ Implementing cable requires access to implementations of the following:
 
 This cryptographic functionality can be provided by [libsodium](https://libsodium.org) 1.0.18-stable, if bindings exist for one's implementation language of choice. In particular, these functions may be utilized, with their default settings:
 
-* `crypto_generichash()` - to hash messages with BLAKE2b
-* `crypto_sign_keypair()` - to generate public and secret Ed25519 keys
-* `crypto_sign()` - to calculate the signature of a post (in combined mode)
-* `crypto_sign_open()` - to verify the signature of a post (in combined mode)
+* [`crypto_generichash()`](https://doc.libsodium.org/hashing/generic_hashing#usage) - to hash messages with BLAKE2b
+* [`crypto_sign_keypair()`](https://doc.libsodium.org/public-key_cryptography/public-key_signatures#key-pair-generation) - to generate public and secret Ed25519 keys
+* [`crypto_sign()`](https://doc.libsodium.org/public-key_cryptography/public-key_signatures#combined-mode) - to calculate the signature of a post (in combined mode)
+* [`crypto_sign_open()`](https://doc.libsodium.org/public-key_cryptography/public-key_signatures#combined-mode) - to verify the signature of a post (in combined mode)
 
 ### 4.1.1 BLAKE2b Parameters
 The following are the general parameters to be used with BLAKE2b. If one is using 1.0.18-stable of libsodium, these are already set by default.
