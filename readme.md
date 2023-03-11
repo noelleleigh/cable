@@ -84,7 +84,7 @@ facilitate peer-to-peer group chatrooms.
 ## 0. Background
 [Cabal][Cabal] is an existing distributed peer-to-peer computer program for
 private group chat. It operates in a fashion differently from the typical
-server-client model, where no machine is either an official nor de-facto
+server-client model, where no machine is either an official nor de facto
 authority over others in the network. Instead, peers collaborate with each
 other to share documents to build an eventually-consistent view of the shared
 data.
