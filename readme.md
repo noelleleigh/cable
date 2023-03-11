@@ -537,7 +537,7 @@ If `foo = 17` and `bar = [3,6,8,64]`, the following binary payload would be expe
 The following data types are used:
 - `u8`: a single unsigned byte
 - `u8[N]`: a sequence of exactly `N` unsigned bytes
-- `varint`: a variable-length unsigned integer. cable uses Protocol Buffer-style [varints](https://developers.google.com/protocol-buffers/docs/encoding#varints). (For an example implementation of varint encoding/decoding, see the [NodeJS varint package](https://www.npmjs.com/package/varint).)
+- `varint`: a variable-length unsigned integer. cable uses Protocol Buffer-style [varints](https://developers.google.com/protocol-buffers/docs/encoding#varints). (For an example implementation of varint encoding/decoding, see the [Node.js varint package](https://www.npmjs.com/package/varint).)
 
 
 ### 6.2 Messages
