@@ -254,7 +254,7 @@ the possible participation of client implementations that do not set links.)
 
 #### 5.1.5 Ordering
 Only chat messages need to be sorted, and sorting only needs to happen at the
-level of a client implementation -- not something a wire protocol
+level of a client implementation — not something a wire protocol
 implementation needs to worry about. Still, it is included here as a learning
 aid until a separate guide for implementors is written.
 
@@ -944,7 +944,7 @@ Its `post_type` MUST be set to `5`.
 
 ### 7.2 In-scope Threats
 
-Documented here are attacks that can come from *within* a cabal -- by those who are technically legitimate members and can peer freely with other members. It is currently assumed (until something like a version of Cabal's subjective moderation system is designed & implemented) that those who are proper members of a cabal are trusted to not cause problems for other users, but even a future moderation design would benefit from a clearly laid-out of the attack surface.
+Documented here are attacks that can come from *within* a cabal — by those who are technically legitimate members and can peer freely with other members. It is currently assumed (until something like a version of Cabal's subjective moderation system is designed & implemented) that those who are proper members of a cabal are trusted to not cause problems for other users, but even a future moderation design would benefit from a clearly laid-out of the attack surface.
 
 ### 7.2.1 Susceptibilities
 #### 7.2.1.1 Inappropriate Use
