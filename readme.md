@@ -160,7 +160,7 @@ carry out.
 
 **Chat message**: A post of type `post/text`, which is made within a particular channel.
 
-**UNIX Epoch**: Midnight on January 1st, 1970.
+**UNIX Epoch**: Midnight UTC on January 1st, 1970.
 
 **UNIX Time**: A point in time, represented by the number of seconds since the UNIX Epoch. Here, this value is assumed to be non-negative, meaning dates before the UNIX Epoch can not be represented.
 
